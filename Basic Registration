@@ -15,8 +15,6 @@
                 <p> <input id="model" type="text" placeholder="4S3BMHB68B3286050" value="" /></p>
                 <p> <input id="year" type="number" placeholder="1998" value="" /></p>
 
-
-
                 <input id="rgstr_btn" type="submit" value="Register" onClick="store()" />
             </form>
 
@@ -26,8 +24,6 @@
 
                     <p> <input id="userPw" type="password" placeholder="Enter Password" value="" /></p>
 
-
-                
                 <input id="login_btn" type="submit" value="Login" onClick="check()" />
             </form>
 
@@ -47,26 +43,30 @@
                     localStorage.setItem('year', year.value);
 
 
-                // check if stored data from register-form is equal to entered data in the   login-form
-                function check() {
-
-                    // stored data from the register-form
-                    var storedName = localStorage.getItem('name1');
-                    var storedPw = localStorage.getItem('pw');
-                    var storedModel = localStorage.getItem('model');
-                    var storedYear = localStorage.getItem('year');
-
-                    // entered data from the login-form
-                    var userName = document.getElementById('userName');
-                    var userPw = document.getElementById('userPw');
-
-                    // check if stored data from register-form is equal to data from login form
-                    if (userName.value == storedName && userPw.value == storedPw) {
-                        alert('You are logged in.');
-                    } else {
-                        alert('Incorrect details');
-                    }
                 }
+
+
+                    // check if stored data from register-form is equal to entered data in the   login-form
+                    function check() {
+
+                        // stored data from the register-form
+                        var storedName = localStorage.getItem('name1');
+                        var storedPw = localStorage.getItem('pw');
+                        var storedModel = localStorage.getItem('model');
+                        var storedYear = localStorage.getItem('year');
+
+                        // entered data from the login-form
+                        var userName = document.getElementById('userName');
+                        var userPw = document.getElementById('userPw');
+
+                        // check if stored data from register-form is equal to data from login form
+                        if (userName.value == storedName && userPw.value == storedPw) {
+                            alert('You are logged in.');
+                        } else {
+                            alert('Incorrect details');
+                        }
+                    }
+                
 
             </script>
 
